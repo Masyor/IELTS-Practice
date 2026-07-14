@@ -6,4 +6,5 @@ coverage/
 *.log
 .env*
 !.env.example
-firebase-applet-config.json
+# Client-side Firebase configuration file (safe to commit to git)
+# firebase-applet-config.json

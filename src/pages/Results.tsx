@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { db } from '../lib/firebase';
-import { collection, query, where, getDocs, doc, deleteDoc } from 'firebase/firestore';
+import { getResults, deleteResult } from '../lib/firebase';
 import { format } from 'date-fns';
 import { TestResult } from '../types';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend } from 'recharts';
@@ -26,13 +25,7 @@ export default function Results() {
     
     const fetchResults = async () => {
       try {
-        const q = query(
-          collection(db, 'results'),
-          where('userId', '==', user.uid)
-        );
-        const querySnapshot = await getDocs(q);
-        const docs = querySnapshot.docs.map(d => ({ id: d.id, ...d.data() } as TestResult));
-        
+        const docs = await getResults(user.uid);
         docs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         setResults(docs);
       } catch (e) {
@@ -47,7 +40,7 @@ export default function Results() {
 
   const handleDelete = async (id: string) => {
     try {
-      await deleteDoc(doc(db, 'results', id));
+      await deleteResult(id);
       setResults(prev => prev.filter(r => r.id !== id));
       setDeletingId(null);
     } catch (e) {

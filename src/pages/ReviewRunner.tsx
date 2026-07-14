@@ -4,8 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { Test, TestResult } from '../types';
 import { Check, X, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import Highlighter from '../components/Highlighter';
-import { db } from '../lib/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+import { getResultById } from '../lib/firebase';
 
 export default function ReviewRunner() {
   const { resultId } = useParams<{ resultId: string }>();
@@ -20,9 +19,8 @@ export default function ReviewRunner() {
 
     const fetchResultAndTest = async () => {
       try {
-        const resultDoc = await getDoc(doc(db, 'results', resultId));
-        if (resultDoc.exists()) {
-          const resultData = { id: resultDoc.id, ...resultDoc.data() } as TestResult;
+        const resultData = await getResultById(resultId);
+        if (resultData) {
           setResult(resultData);
 
           const testRes = await fetch(`/data/${resultData.testType}/${resultData.testId}.json`);

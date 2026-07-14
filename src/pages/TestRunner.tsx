@@ -5,8 +5,7 @@ import { Test, QuestionType, Question } from '../types';
 import { useTimer } from '../hooks/useTimer';
 import { Clock, Save, CheckCircle, ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import Highlighter from '../components/Highlighter';
-import { db } from '../lib/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { saveResult } from '../lib/firebase';
 
 export default function TestRunner() {
   const { type, id } = useParams<{ type: 'reading' | 'listening'; id: string }>();
@@ -99,7 +98,7 @@ export default function TestRunner() {
     };
 
     try {
-      const docRef = await addDoc(collection(db, 'results'), result);
+      const docRef = await saveResult(result);
       localStorage.removeItem(`ielts_${type}_${id}_answers`);
       setScoreInfo({ score, total });
       setResultId(docRef.id);

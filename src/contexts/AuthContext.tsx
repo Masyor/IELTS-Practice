@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User, onAuthStateChanged } from 'firebase/auth';
-import { auth, loginWithGoogle, logout } from '../lib/firebase';
+import { auth, loginWithGoogle, logout, isFirebaseConfigured } from '../lib/firebase';
 
 interface AuthContextType {
   user: User | null;
@@ -16,6 +16,15 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (!isFirebaseConfigured) {
+      const savedUser = localStorage.getItem("ielts_practice_mock_user");
+      if (savedUser) {
+        setUser(JSON.parse(savedUser));
+      }
+      setLoading(false);
+      return;
+    }
+
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setUser(user);
       setLoading(false);
@@ -25,11 +34,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const login = async () => {
-    await loginWithGoogle();
+    const loggedInUser = await loginWithGoogle();
+    if (!isFirebaseConfigured) {
+      setUser(loggedInUser as any);
+    }
   };
 
   const logoutHandler = async () => {
     await logout();
+    if (!isFirebaseConfigured) {
+      setUser(null);
+    }
   };
 
   return (

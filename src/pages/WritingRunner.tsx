@@ -4,8 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { WritingTest } from '../types';
 import { useTimer } from '../hooks/useTimer';
 import { Clock, Send, Mail, Copy, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
-import { db } from '../lib/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { saveResult } from '../lib/firebase';
 
 export default function WritingRunner() {
   const { id } = useParams<{ id: string }>();
@@ -44,7 +43,7 @@ export default function WritingRunner() {
     };
 
     try {
-      const docRef = await addDoc(collection(db, 'results'), result);
+      const docRef = await saveResult(result);
       localStorage.removeItem(`ielts_writing_${id}_answers`);
       setResultId(docRef.id);
       setSubmitted(true);
