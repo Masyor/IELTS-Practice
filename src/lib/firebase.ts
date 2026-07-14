@@ -25,17 +25,22 @@ export const db = getFirestore(app, import.meta.env.VITE_FIREBASE_FIRESTORE_DATA
 export const googleProvider = new GoogleAuthProvider();
 export const isFirebaseConfigured = isConfigured;
 
+export const loginAsDemoUser = async () => {
+  const mockUser = {
+    uid: "local-demo-user",
+    email: "demo-student@ielts-practice.com",
+    displayName: "Demo Student",
+    photoURL: "https://api.dicebear.com/7.x/adventurer/svg?seed=IELTS",
+    emailVerified: true
+  };
+  localStorage.setItem("ielts_practice_mock_user", JSON.stringify(mockUser));
+  return mockUser;
+};
+
 export const loginWithGoogle = async () => {
   if (!isFirebaseConfigured) {
-    const mockUser = {
-      uid: "local-user-id",
-      email: "demo-student@ielts-practice.com",
-      displayName: "Demo Student",
-      photoURL: "https://api.dicebear.com/7.x/adventurer/svg?seed=IELTS",
-      emailVerified: true
-    };
-    localStorage.setItem("ielts_practice_mock_user", JSON.stringify(mockUser));
-    return mockUser;
+    // If not configured, fall back to loginAsDemoUser as a safe graceful backup
+    return await loginAsDemoUser();
   }
   try {
     const result = await signInWithPopup(auth, googleProvider);
@@ -47,8 +52,8 @@ export const loginWithGoogle = async () => {
 };
 
 export const logout = async () => {
+  localStorage.removeItem("ielts_practice_mock_user");
   if (!isFirebaseConfigured) {
-    localStorage.removeItem("ielts_practice_mock_user");
     return;
   }
   try {
@@ -60,7 +65,7 @@ export const logout = async () => {
 };
 
 export const saveResult = async (result: any): Promise<{ id: string }> => {
-  if (!isFirebaseConfigured) {
+  if (!isFirebaseConfigured || result.userId === "local-demo-user") {
     const id = "mock-result-" + Date.now() + "-" + Math.random().toString(36).substring(2, 9);
     const mockResults = JSON.parse(localStorage.getItem("ielts_practice_results") || "[]");
     const newResult = { id, ...result };
@@ -73,7 +78,7 @@ export const saveResult = async (result: any): Promise<{ id: string }> => {
 };
 
 export const getResults = async (userId: string): Promise<any[]> => {
-  if (!isFirebaseConfigured) {
+  if (!isFirebaseConfigured || userId === "local-demo-user") {
     const mockResults = JSON.parse(localStorage.getItem("ielts_practice_results") || "[]");
     return mockResults.filter((r: any) => r.userId === userId);
   }
@@ -83,7 +88,7 @@ export const getResults = async (userId: string): Promise<any[]> => {
 };
 
 export const getResultById = async (id: string): Promise<any | null> => {
-  if (!isFirebaseConfigured) {
+  if (!isFirebaseConfigured || id.startsWith("mock-result-")) {
     const mockResults = JSON.parse(localStorage.getItem("ielts_practice_results") || "[]");
     const found = mockResults.find((r: any) => r.id === id);
     return found || null;
@@ -96,7 +101,7 @@ export const getResultById = async (id: string): Promise<any | null> => {
 };
 
 export const deleteResult = async (id: string): Promise<void> => {
-  if (!isFirebaseConfigured) {
+  if (!isFirebaseConfigured || id.startsWith("mock-result-")) {
     const mockResults = JSON.parse(localStorage.getItem("ielts_practice_results") || "[]");
     const filtered = mockResults.filter((r: any) => r.id !== id);
     localStorage.setItem("ielts_practice_results", JSON.stringify(filtered));

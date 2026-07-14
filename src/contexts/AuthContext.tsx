@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { User, onAuthStateChanged } from 'firebase/auth';
-import { auth, loginWithGoogle, logout, isFirebaseConfigured } from '../lib/firebase';
+import { auth, loginWithGoogle, logout, isFirebaseConfigured, loginAsDemoUser } from '../lib/firebase';
 
 interface AuthContextType {
   user: User | null;
   loading: boolean;
   login: () => Promise<void>;
+  loginAsDemo: () => Promise<void>;
   logout: () => Promise<void>;
 }
 
@@ -16,17 +17,23 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!isFirebaseConfigured) {
-      const savedUser = localStorage.getItem("ielts_practice_mock_user");
-      if (savedUser) {
-        setUser(JSON.parse(savedUser));
-      }
+    const savedUser = localStorage.getItem("ielts_practice_mock_user");
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
       setLoading(false);
       return;
     }
 
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
+    if (!isFirebaseConfigured) {
+      setLoading(false);
+      return;
+    }
+
+    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
+      const activeDemoUser = localStorage.getItem("ielts_practice_mock_user");
+      if (!activeDemoUser) {
+        setUser(firebaseUser);
+      }
       setLoading(false);
     });
 
@@ -35,20 +42,21 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const login = async () => {
     const loggedInUser = await loginWithGoogle();
-    if (!isFirebaseConfigured) {
-      setUser(loggedInUser as any);
-    }
+    setUser(loggedInUser as any);
+  };
+
+  const loginAsDemo = async () => {
+    const loggedInUser = await loginAsDemoUser();
+    setUser(loggedInUser as any);
   };
 
   const logoutHandler = async () => {
     await logout();
-    if (!isFirebaseConfigured) {
-      setUser(null);
-    }
+    setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, login, logout: logoutHandler }}>
+    <AuthContext.Provider value={{ user, loading, login, loginAsDemo, logout: logoutHandler }}>
       {children}
     </AuthContext.Provider>
   );
