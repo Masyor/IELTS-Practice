@@ -1,0 +1,53 @@
+{
+  "reading": [
+    {
+      "id": "reading_1",
+      "title": "Academic Reading Practice Test 1",
+      "file": "/data/reading/reading_1.json"
+    },
+    {
+      "id": "reading_2",
+      "title": "Academic Reading Practice Test 2",
+      "file": "/data/reading/reading_2.json"
+    },
+    {
+      "id": "reading_3",
+      "title": "Academic Reading Practice Test 3",
+      "file": "/data/reading/reading_3.json"
+    }
+  ],
+  "listening": [
+    {
+      "id": "listening_1",
+      "title": "Listening Practice Test 1",
+      "file": "/data/listening/listening_1.json"
+    },
+    {
+      "id": "listening_2",
+      "title": "Listening Practice Test 2",
+      "file": "/data/listening/listening_2.json"
+    },
+    {
+      "id": "listening_3",
+      "title": "Listening Practice Test 3",
+      "file": "/data/listening/listening_3.json"
+    }
+  ],
+  "writing": [
+    {
+      "id": "writing_1",
+      "title": "Academic Writing Practice Test 1",
+      "file": "/data/writing/writing_1.json"
+    },
+    {
+      "id": "writing_2",
+      "title": "Academic Writing Practice Test 2",
+      "file": "/data/writing/writing_2.json"
+    },
+    {
+      "id": "writing_3",
+      "title": "Academic Writing Practice Test 3",
+      "file": "/data/writing/writing_3.json"
+    }
+  ]
+}

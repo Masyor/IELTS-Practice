@@ -1,0 +1,22 @@
+{
+  "id": "writing_2",
+  "title": "Academic Writing Practice Test 2",
+  "type": "writing",
+  "durationMinutes": 60,
+  "tasks": [
+    {
+      "id": "wt1",
+      "taskNumber": 1,
+      "instructions": "You should spend about 20 minutes on this task.",
+      "prompt": "The graph below shows the demand for electricity in England during typical days in winter and summer. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "minimumWords": 150
+    },
+    {
+      "id": "wt2",
+      "taskNumber": 2,
+      "instructions": "You should spend about 40 minutes on this task.",
+      "prompt": "Many governments think that economic progress is their most important goal. Some people, however, think that other types of progress are equally important for a country. Discuss both these views and give your own opinion.",
+      "minimumWords": 250
+    }
+  ]
+}

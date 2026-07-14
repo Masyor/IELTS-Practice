@@ -1,0 +1,51 @@
+{
+  "id": "reading_3",
+  "title": "Academic Reading Practice Test 3",
+  "type": "reading",
+  "durationMinutes": 60,
+  "sections": [
+    {
+      "id": "r3_s1",
+      "title": "Passage 1: The Development of Museums",
+      "instructions": "Read the passage and answer Questions 1-3.",
+      "content": "The concept of a museum has evolved significantly over centuries. Early collections, known as 'cabinets of curiosities', were private accumulations of extraordinary objects owned by wealthy individuals. It was only during the Enlightenment that the idea of public museums emerged, aiming to educate the general populace.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple_choice",
+          "text": "What were early collections called?",
+          "options": [
+            "Public museums",
+            "Cabinets of curiosities",
+            "Enlightenment exhibits"
+          ],
+          "answer": "Cabinets of curiosities"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "true_false_not_given",
+          "text": "Early collections were open to the public.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "answer": "False"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence_completion",
+          "text": "Public museums emerged during the ______.",
+          "answer": [
+            [
+              "Enlightenment"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

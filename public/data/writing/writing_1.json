@@ -1,0 +1,22 @@
+{
+  "id": "writing_1",
+  "title": "Academic Writing Practice Test 1",
+  "type": "writing",
+  "durationMinutes": 60,
+  "tasks": [
+    {
+      "id": "wt1",
+      "taskNumber": 1,
+      "instructions": "You should spend about 20 minutes on this task.",
+      "prompt": "The chart below shows the number of men and women in further education in Britain in three periods and whether they were studying full-time or part-time.\n\nSummarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "minimumWords": 150
+    },
+    {
+      "id": "wt2",
+      "taskNumber": 2,
+      "instructions": "You should spend about 40 minutes on this task.",
+      "prompt": "Some people believe that unpaid community service should be a compulsory part of high school programmes (for example working for a charity, improving the neighbourhood or teaching sports to younger children).\n\nTo what extent do you agree or disagree?",
+      "minimumWords": 250
+    }
+  ]
+}

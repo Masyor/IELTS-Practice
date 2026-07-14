@@ -1,0 +1,155 @@
+{
+  "id": "reading_1",
+  "title": "Academic Reading Practice Test 1",
+  "type": "reading",
+  "durationMinutes": 60,
+  "sections": [
+    {
+      "id": "r1_s1",
+      "title": "Section 1: The History of the Bicycle",
+      "instructions": "Read the text below and answer Questions 1-5.",
+      "content": "The bicycle was not invented by one single person, but evolved through the efforts of many. In 1817, Karl von Drais introduced a two-wheeled, steerable machine that was propelled by pushing one's feet against the ground. This machine, called the 'Draisine' or 'running machine', was made entirely of wood and had no pedals.\n\nIn the 1860s, French inventors Pierre Michaux and Pierre Lallement added pedals to the front wheel, creating the 'velocipede' or 'boneshaker'. It was notoriously uncomfortable to ride due to its stiff wooden frame and iron tires.\n\nThe 1870s saw the development of the 'Penny Farthing' or high-wheel bicycle. The large front wheel allowed for higher speeds, but it was dangerous and difficult to ride. Finally, in the late 1880s, the 'safety bicycle' was introduced by John Kemp Starley. It featured a chain drive to the rear wheel and equally sized wheels, making it much safer and more comfortable. This design is the basis for modern bicycles.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple_choice",
+          "text": "Who is credited with introducing the first two-wheeled steerable machine?",
+          "options": ["Karl von Drais", "Pierre Michaux", "John Kemp Starley", "Henry Ford"],
+          "answer": "Karl von Drais",
+          "groupTitle": "Questions 1-2",
+          "groupInstructions": "Choose the correct option."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "true_false_not_given",
+          "text": "The Draisine was propelled using pedals.",
+          "options": ["True", "False", "Not Given"],
+          "answer": "False"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "short_answer",
+          "text": "What material were the tires of the 'boneshaker' made from?",
+          "answer": ["iron"],
+          "groupTitle": "Questions 3-4",
+          "groupInstructions": "Answer the questions. Write NO MORE THAN TWO WORDS from the text for each answer."
+        },
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "sentence_completion",
+          "text": "The 'Penny Farthing' was able to achieve higher speeds because of its large ______.",
+          "answer": ["front wheel"]
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "matching_features",
+          "text": "Match the inventor to the bicycle feature.",
+          "options": ["Karl von Drais", "Pierre Michaux", "John Kemp Starley"],
+          "answer": "John Kemp Starley",
+          "groupTitle": "Question 5",
+          "groupInstructions": "Choose the correct inventor."
+        }
+      ]
+    },
+    {
+      "id": "r1_s2",
+      "title": "Section 2: The Migration of the Monarch Butterfly",
+      "instructions": "Read the text below and answer Questions 6-10.",
+      "content": "Paragraph A\nThe monarch butterfly is famous for its southward late-summer migration from the United States and Canada to Mexico, which covers thousands of miles. This is the only butterfly known to make a two-way migration as birds do. Unlike other species that can overwinter as larvae or pupae, monarchs cannot survive the freezing northern winters.\n\nParagraph B\nIn Mexico, the monarchs roost in oyamel fir trees in the Trans-Mexican Volcanic Belt pine-oak forests. The microclimate provided by the trees protects the butterflies. They cluster closely together to stay warm. Tens of thousands of butterflies can cluster on a single tree.\n\nParagraph C\nBy March, they begin their journey back north. The females lay eggs on milkweed plants along the way. It takes three to four generations to reach the northernmost parts of their range in the US and Canada. The monarch's lifespan during the summer is only two to five weeks, but the migrating generation can live up to nine months.",
+      "questions": [
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "matching_headings",
+          "text": "Which paragraph contains information about the breeding grounds on the return journey?",
+          "options": ["Paragraph A", "Paragraph B", "Paragraph C"],
+          "answer": "Paragraph C",
+          "groupTitle": "Questions 6-7",
+          "groupInstructions": "Choose the correct paragraph or option."
+        },
+        {
+          "id": "q7",
+          "number": 7,
+          "type": "yes_no_not_given",
+          "text": "Monarch butterflies can survive freezing temperatures if they remain in the pupal stage.",
+          "options": ["Yes", "No", "Not Given"],
+          "answer": "No"
+        },
+        {
+          "id": "q8_9",
+          "number": 8,
+          "type": "completion",
+          "text": "The monarch is unique because it makes a ______ migration similar to birds. To survive the winter, they roost in ______ trees in Mexico.",
+          "answer": [["two-way"], ["oyamel fir"]],
+          "groupTitle": "Questions 8-9",
+          "groupInstructions": "Complete the summary below. Write ONE WORD ONLY from the text for each answer."
+        },
+        {
+          "id": "q10",
+          "number": 10,
+          "type": "matching_sentence_endings",
+          "text": "The migrating generation of monarch butterflies...",
+          "options": ["...lives for two to five weeks.", "...can live up to nine months.", "...lays eggs in Canada only."],
+          "answer": "...can live up to nine months.",
+          "groupTitle": "Questions 10-11",
+          "groupInstructions": "Complete each sentence with the correct ending or option."
+        },
+        {
+          "id": "q11",
+          "number": 11,
+          "type": "matching",
+          "text": "What type of forest provides the winter habitat for monarchs?",
+          "options": ["Tropical rainforest", "Pine-oak forests", "Deciduous woodlands"],
+          "answer": "Pine-oak forests"
+        }
+      ]
+    },
+    {
+      "id": "r1_s3",
+      "title": "Section 3: The Structure of a Wind Turbine",
+      "instructions": "Read the text below and answer Questions 11-13.",
+      "content": "A wind turbine consists of several key components designed to convert kinetic energy from the wind into electrical power. The large blades, which catch the wind, are connected to a rotor hub. The rotor hub is attached to a low-speed shaft inside the nacelle. \n\nInside the nacelle, a gearbox connects the low-speed shaft to a high-speed shaft, increasing the rotational speeds from about 30-60 rotations per minute (rpm) to about 1000-1800 rpm. This high-speed shaft drives the electrical generator. A wind vane and anemometer sit on top of the nacelle to measure wind direction and speed, sending data to the controller which adjusts the yaw drive to face the blades into the wind.",
+      "imageUrls": ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Wind_turbine_schematic.svg/800px-Wind_turbine_schematic.svg.png"],
+      "questions": [
+        {
+          "id": "q12",
+          "number": 12,
+          "type": "labeling",
+          "text": "What component is directly driven by the high-speed shaft?",
+          "answer": ["generator", "electrical generator"],
+          "groupTitle": "Question 12",
+          "groupInstructions": "Answer the question. Write NO MORE THAN TWO WORDS from the text for your answer."
+        },
+        {
+          "id": "q13",
+          "number": 13,
+          "type": "table_completion",
+          "text": "Complete the table below.",
+          "tableData": [
+            ["Component", "Function"],
+            ["Blades", "Catch the wind"],
+            ["Gearbox", "Connects low-speed shaft to ______"],
+            ["______", "Measures wind speed"]
+          ],
+          "answer": [["high-speed shaft"], ["anemometer"]],
+          "groupTitle": "Questions 13-14",
+          "groupInstructions": "Complete the table below. Write NO MORE THAN TWO WORDS from the text for each answer."
+        },
+        {
+          "id": "q15",
+          "number": 15,
+          "type": "sentence_completion",
+          "text": "The ______ and anemometer sit on top of the nacelle to measure wind ______ and speed.",
+          "answer": [["wind vane"], ["direction"]],
+          "groupTitle": "Questions 15-16",
+          "groupInstructions": "Complete the sentences below. Write NO MORE THAN TWO WORDS from the text for each answer."
+        }
+      ]
+    }
+  ]
+}

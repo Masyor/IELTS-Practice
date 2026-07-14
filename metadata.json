@@ -1,0 +1,6 @@
+{
+  "name": "IELTS Practice",
+  "description": "An authentic IELTS practice web application for reading, listening, and writing skills with timed tests and progress tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

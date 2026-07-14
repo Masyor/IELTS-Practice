@@ -1,0 +1,22 @@
+{
+  "id": "writing_3",
+  "title": "Academic Writing Practice Test 3",
+  "type": "writing",
+  "durationMinutes": 60,
+  "tasks": [
+    {
+      "id": "wt1",
+      "taskNumber": 1,
+      "instructions": "You should spend about 20 minutes on this task.",
+      "prompt": "The diagrams below show the life cycle of a species of large fish called the salmon. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.",
+      "minimumWords": 150
+    },
+    {
+      "id": "wt2",
+      "taskNumber": 2,
+      "instructions": "You should spend about 40 minutes on this task.",
+      "prompt": "Some people believe that university education should be free for everyone. Others think that students should pay for their higher education. Discuss both these views and give your own opinion.",
+      "minimumWords": 250
+    }
+  ]
+}

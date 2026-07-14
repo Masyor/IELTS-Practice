@@ -1,0 +1,82 @@
+{
+  "id": "reading_2",
+  "title": "Academic Reading Practice Test 2",
+  "type": "reading",
+  "durationMinutes": 60,
+  "sections": [
+    {
+      "id": "r2_s1",
+      "title": "Passage 1: The History of the Bicycle",
+      "instructions": "Read the passage and answer Questions 1-5.",
+      "content": "The bicycle was invented in the 19th century and has since become one of the most common forms of transportation globally. Early models, such as the Penny Farthing, featured a massive front wheel and a tiny rear wheel, making them difficult and dangerous to ride. It wasn't until the development of the safety bicycle in the late 1880s, which introduced wheels of equal size and a chain drive, that cycling became widely accessible.",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "multiple_choice",
+          "text": "When was the bicycle invented?",
+          "options": [
+            "18th century",
+            "19th century",
+            "20th century"
+          ],
+          "answer": "19th century"
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "true_false_not_given",
+          "text": "The Penny Farthing was easy to ride.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "answer": "False"
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "sentence_completion",
+          "text": "The development of the ______ made cycling widely accessible.",
+          "answer": [
+            [
+              "safety bicycle",
+              "safety bike"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "r2_s2",
+      "title": "Passage 2: Urban Agriculture",
+      "instructions": "Read the passage and answer Questions 4-6.",
+      "content": "Urban agriculture involves growing plants and raising animals within and around cities. It provides a significant amount of food to urban populations and reduces the carbon footprint associated with transporting food from rural areas. Rooftop gardens and vertical farms are increasingly common in modern metropolises.",
+      "questions": [
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "true_false_not_given",
+          "text": "Urban agriculture only involves growing plants.",
+          "options": [
+            "True",
+            "False",
+            "Not Given"
+          ],
+          "answer": "False"
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "short_answer",
+          "text": "Where are rooftop gardens commonly found today?",
+          "answer": [
+            "modern metropolises",
+            "cities"
+          ]
+        }
+      ]
+    }
+  ]
+}

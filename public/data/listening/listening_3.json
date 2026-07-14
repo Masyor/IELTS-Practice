@@ -1,0 +1,41 @@
+{
+  "id": "listening_3",
+  "title": "Listening Practice Test 3",
+  "type": "listening",
+  "durationMinutes": 30,
+  "sections": [
+    {
+      "id": "l3_s1",
+      "title": "Part 1: Hotel Booking",
+      "instructions": "Listen to the conversation and answer Questions 1-2.",
+      "content": "Listen to the audio to answer the questions.",
+      "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "completion",
+          "text": "Room Type: ______",
+          "answer": [
+            [
+              "Double",
+              "double room"
+            ]
+          ]
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple_choice",
+          "text": "What is included in the price?",
+          "options": [
+            "Breakfast",
+            "Dinner",
+            "Spa access"
+          ],
+          "answer": "Breakfast"
+        }
+      ]
+    }
+  ]
+}

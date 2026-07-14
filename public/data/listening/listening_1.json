@@ -1,0 +1,134 @@
+{
+  "id": "listening_1",
+  "title": "Listening Practice Test 1",
+  "type": "listening",
+  "durationMinutes": 30,
+  "sections": [
+    {
+      "id": "l1_s1",
+      "title": "Part 1: Travel Agency Enquiry",
+      "instructions": "Listen to the conversation and answer Questions 1-3.",
+      "content": "Listen to the audio to answer the questions.",
+      "audioUrl": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "questions": [
+        {
+          "id": "q1",
+          "number": 1,
+          "type": "completion",
+          "text": "Destination: ______",
+          "answer": ["Australia", "australia"],
+          "groupTitle": "Question 1",
+          "groupInstructions": "Complete the form below. Write NO MORE THAN ONE WORD for the answer."
+        },
+        {
+          "id": "q2",
+          "number": 2,
+          "type": "multiple_choice",
+          "text": "How long does the customer plan to stay?",
+          "options": ["One week", "Two weeks", "Three weeks", "A month"],
+          "answer": "Two weeks",
+          "groupTitle": "Question 2",
+          "groupInstructions": "Choose the correct option."
+        },
+        {
+          "id": "q3",
+          "number": 3,
+          "type": "short_answer",
+          "text": "What specific site does the customer want to visit?",
+          "answer": ["Great Barrier Reef", "great barrier reef"],
+          "groupTitle": "Question 3",
+          "groupInstructions": "Answer the question. Write NO MORE THAN THREE WORDS for the answer."
+        }
+      ]
+    },
+    {
+      "id": "l1_s2",
+      "title": "Part 2: Museum Tour",
+      "instructions": "Listen to the guide and answer Questions 4-6.",
+      "content": "Listen to the audio to answer the questions.",
+      "questions": [
+        {
+          "id": "q4",
+          "number": 4,
+          "type": "matching",
+          "text": "Which exhibit is on the second floor?",
+          "options": ["Dinosaur Fossils", "Ancient Egypt", "Modern Art"],
+          "answer": "Ancient Egypt",
+          "groupTitle": "Question 4",
+          "groupInstructions": "Choose the correct exhibit."
+        },
+        {
+          "id": "q5",
+          "number": 5,
+          "type": "sentence_completion",
+          "text": "The museum café is located next to the ______.",
+          "answer": ["gift shop", "shop"],
+          "groupTitle": "Question 5",
+          "groupInstructions": "Complete the sentence below. Write NO MORE THAN TWO WORDS for the answer."
+        },
+        {
+          "id": "q6",
+          "number": 6,
+          "type": "labeling",
+          "text": "Label the map: The exit is located on the ______ side of the building.",
+          "answer": ["south", "South"],
+          "groupTitle": "Question 6",
+          "groupInstructions": "Label the map. Write ONE WORD ONLY for the answer."
+        }
+      ]
+    },
+    {
+      "id": "l1_s3",
+      "title": "Part 3: University Assignment Discussion",
+      "instructions": "Listen to the students and answer Questions 7-8.",
+      "content": "Listen to the audio to answer the questions.",
+      "questions": [
+        {
+          "id": "q7",
+          "number": 7,
+          "type": "multiple_choice",
+          "text": "What is the main topic of their presentation?",
+          "options": ["Climate Change", "Renewable Energy", "Urban Planning"],
+          "answer": "Renewable Energy",
+          "groupTitle": "Question 7",
+          "groupInstructions": "Choose the correct option."
+        },
+        {
+          "id": "q8",
+          "number": 8,
+          "type": "completion",
+          "text": "They agreed to meet on ______ to finalize the slides.",
+          "answer": ["Thursday", "thursday"],
+          "groupTitle": "Question 8",
+          "groupInstructions": "Complete the sentence. Write ONE WORD ONLY for the answer."
+        }
+      ]
+    },
+    {
+      "id": "l1_s4",
+      "title": "Part 4: Lecture on Deep Sea Biology",
+      "instructions": "Listen to the lecture and answer Questions 9-10.",
+      "content": "Listen to the audio to answer the questions.",
+      "questions": [
+        {
+          "id": "q9",
+          "number": 9,
+          "type": "sentence_completion",
+          "text": "Many deep-sea creatures use bioluminescence to attract ______.",
+          "answer": ["prey", "food"],
+          "groupTitle": "Question 9",
+          "groupInstructions": "Complete the sentence below. Write ONE WORD ONLY for the answer."
+        },
+        {
+          "id": "q10",
+          "number": 10,
+          "type": "short_answer",
+          "text": "What is the main source of energy for hydrothermal vent ecosystems?",
+          "answer": ["chemicals", "chemical energy"],
+          "groupTitle": "Question 10",
+          "groupInstructions": "Answer the question. Write NO MORE THAN TWO WORDS for the answer."
+        }
+      ]
+    }
+  ]
+}
