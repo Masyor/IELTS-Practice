@@ -5,6 +5,7 @@ import { WritingTest } from '../types';
 import { useTimer } from '../hooks/useTimer';
 import { Clock, Send, Mail, Copy, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import { saveResult } from '../lib/firebase';
+import { getAssetPath } from '../lib/utils';
 
 export default function WritingRunner() {
   const { id } = useParams<{ id: string }>();
@@ -18,7 +19,7 @@ export default function WritingRunner() {
   const [resultId, setResultId] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch(`/data/writing/${id}.json`)
+    fetch(getAssetPath(`/data/writing/${id}.json`))
       .then(res => res.json())
       .then(data => setTest(data))
       .catch(console.error);

@@ -5,6 +5,7 @@ import { Test, TestResult } from '../types';
 import { Check, X, ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
 import Highlighter from '../components/Highlighter';
 import { getResultById } from '../lib/firebase';
+import { getAssetPath } from '../lib/utils';
 
 export default function ReviewRunner() {
   const { resultId } = useParams<{ resultId: string }>();
@@ -23,7 +24,7 @@ export default function ReviewRunner() {
         if (resultData) {
           setResult(resultData);
 
-          const testRes = await fetch(`/data/${resultData.testType}/${resultData.testId}.json`);
+          const testRes = await fetch(getAssetPath(`/data/${resultData.testType}/${resultData.testId}.json`));
           const testData = await testRes.json();
           setTest(testData);
 

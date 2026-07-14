@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import { BookOpen, Headphones, PenTool, Play } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { getAssetPath } from '../lib/utils';
 
 interface TestManifest {
   id: string;
@@ -18,7 +19,7 @@ export default function Dashboard() {
   });
 
   useEffect(() => {
-    fetch('/data/manifest.json')
+    fetch(getAssetPath('/data/manifest.json'))
       .then(res => res.json())
       .then(data => setManifest(data))
       .catch(console.error);

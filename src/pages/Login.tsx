@@ -20,15 +20,7 @@ export default function Login() {
       await login();
     } catch (err: any) {
       console.error(err);
-      if (!isFirebaseConfigured) {
-        setError("Firebase configuration is not active. Using Demo Student instead.");
-        // Fallback to demo automatically after a short delay
-        setTimeout(() => {
-          loginAsDemo();
-        }, 1500);
-      } else {
-        setError(err.message || "An error occurred during Google sign in.");
-      }
+      setError(err.message || "An error occurred during Google sign in.");
     } finally {
       setLoading(false);
     }

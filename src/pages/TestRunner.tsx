@@ -6,6 +6,7 @@ import { useTimer } from '../hooks/useTimer';
 import { Clock, Save, CheckCircle, ChevronLeft, ChevronRight, Play } from 'lucide-react';
 import Highlighter from '../components/Highlighter';
 import { saveResult } from '../lib/firebase';
+import { getAssetPath } from '../lib/utils';
 
 export default function TestRunner() {
   const { type, id } = useParams<{ type: 'reading' | 'listening'; id: string }>();
@@ -28,7 +29,7 @@ export default function TestRunner() {
 
   useEffect(() => {
     // Fetch test data
-    fetch(`/data/${type}/${id}.json`)
+    fetch(getAssetPath(`/data/${type}/${id}.json`))
       .then(res => res.json())
       .then(data => setTest(data))
       .catch(console.error);

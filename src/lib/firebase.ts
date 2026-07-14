@@ -39,8 +39,7 @@ export const loginAsDemoUser = async () => {
 
 export const loginWithGoogle = async () => {
   if (!isFirebaseConfigured) {
-    // If not configured, fall back to loginAsDemoUser as a safe graceful backup
-    return await loginAsDemoUser();
+    throw new Error("Firebase is not configured. Please configure your Firebase environment variables or use the Demo Student Profile option.");
   }
   try {
     const result = await signInWithPopup(auth, googleProvider);
