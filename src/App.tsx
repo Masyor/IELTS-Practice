@@ -62,9 +62,11 @@ const Navigation = () => {
 };
 
 export default function App() {
+  const basename = window.location.pathname.startsWith('/IELTS-Practice') ? '/IELTS-Practice' : '/';
+
   return (
     <AuthProvider>
-      <Router>
+      <Router basename={basename}>
         <div className="min-h-screen bg-gray-50 flex flex-col font-sans">
           <Navigation />
           <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
